@@ -4,29 +4,29 @@ import DataTable from 'react-data-table-component';
 const columns = [
   {
     name: 'Domain',
-    selector: 'domain',
+    selector: row => row.domain,
     sortable: true,
   },
   {
     name: 'Traffic Share',
-    selector: 'traffic_share',
+    selector: row => row.traffic_share,
     sortable: true,
     cell: row => (row.traffic_share * 100).toFixed(2) + '%',
   },
   {
     name: 'Position',
-    selector: 'position',
+    selector: row => row.position,
     sortable: true,
   },
   {
     name: 'Destination URL',
-    selector: 'destination_url',
+    selector: row => row.destination_url,
     sortable: true,
     cell: row => <a href={row.destination_url}>{row.destination_url}</a>,
   },
   {
     name: 'Website Categories',
-    selector: 'website_categories',
+    selector: row => row.website_categories,
     sortable: true,
   },
 ];
