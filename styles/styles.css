@@ -1,0 +1,65 @@
+h1 {
+  color: blue;
+}
+
+.comment {
+  font-style: italic;
+  color: #7e7e7e;
+}
+
+#my-table {
+  border-collapse: collapse;
+  border: 1px solid black;
+}
+
+#my-table thead th {
+  background-color: #e0e0e0;
+}
+
+#my-table tbody td {
+  background-color: #f8f8f8;
+}
+
+#my-table thead th {
+  text-align: center;
+}
+
+#my-table tbody td {
+  font-size: 14px;
+}
+
+#my-table thead th {
+  height: 50px;
+}
+
+#my-table thead th,
+#my-table tbody td {
+  border: 1px solid black;
+}
+
+#my-table thead th,
+#my-table tbody td {
+  padding: 10px;
+}
+
+#my-table tbody tr:hover {
+  background-color: #d9d9d9;
+}
+
+div.dataTables_wrapper div.dataTables_filter input {
+  width: auto;
+  margin-left: 5px;
+}
+
+div.dataTables_wrapper div.dataTables_paginate ul.pagination {
+  margin: 0;
+}
+
+div.dataTables_wrapper div.dataTables_paginate ul.pagination li.paginate_button {
+  margin: 0;
+}
+
+div.dataTables_wrapper div.dataTables_paginate ul.pagination li.paginate_button.active a {
+  background-color: #4CAF50;
+  border-color: #4CAF50;
+}
