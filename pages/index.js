@@ -26,11 +26,11 @@ export default function Home() {
       alert("錯誤！請輸入查詢關鍵字！");
       return;
     }
-    if (!startDate || !endDate){
+    if (!startDate || !endDate) {
       alert("錯誤！請輸入開始或結束的月份");
       return;
     }
-    const apiKey = "81aa3fc0ace24fdcbf5ebcf73f79a8ff";
+    const apiKey = process.env.API_KEY;
     const url = `https://api.similarweb.com/v4/keywords/keyword/analysis/organic-competitors?api_key=${apiKey}&keyword=${keyword}&start_date=${startDate}&end_date=${endDate}&country=tw&metrics=traffic,organic-vs-paid,volume,cpc&format=json&limit=30&sort=traffic_share`;
     try {
       const response = await fetch(url);
@@ -44,7 +44,7 @@ export default function Home() {
   return (
     <div>
       <h1>Similarweb<br />關鍵字各網站流量查詢</h1>
-      <p className="comment">#只能選擇年、月。<br/>#可選區間為本月至12個月之前。<br/>#數量上限30，按照Traffic Share排序。</p>
+      <p className="comment">#只能選擇年、月。<br />#可選區間為本月至12個月之前。<br />#數量上限30，按照Traffic Share排序。</p>
       <label>輸入關鍵字：</label>
       <input id="query" value={keyword} onChange={(e) => setKeyword(e.target.value)} />
       <br /><br />
