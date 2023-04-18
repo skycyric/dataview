@@ -57,8 +57,6 @@ export default function Home() {
       <button onClick={getApiData}>查詢</button>
       <br /><br />
       <DataTable data={data} />
-      <br /><br />
-      <button id="export-csv-btn" className="export-button">匯出 CSV 檔案</button>
     </div>
   );
 }
