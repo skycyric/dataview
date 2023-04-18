@@ -44,7 +44,7 @@ export default function Home() {
   return (
     <div>
       <h1>Similarweb<br />關鍵字各網站流量查詢</h1>
-      <p className="comment">#只能選擇年、月。<br />#可選區間為本月至12個月之前。<br />#數量上限30，按照Traffic Share排序。</p>
+      <p className="comment">#選擇年、月。<br />#可選區間為本月至12個月之前。<br />#數量上限30，按照Traffic Share排序。</p>
       <label>輸入關鍵字：</label>
       <input id="query" value={keyword} onChange={(e) => setKeyword(e.target.value)} />
       <br /><br />
