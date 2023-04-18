@@ -1,7 +1,6 @@
 {
   "name": "dataview",
   "version": "0.1.0",
-  "homepage": "https://skycyric.github.io/dataview",
   "private": true,
   "scripts": {
     "dev": "next dev",
