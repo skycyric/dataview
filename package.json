@@ -8,7 +8,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "deploy": "npm run build && gh-pages -d build -b gh-pages"
+    "deploy": "npm run build && next export -o out && npx gh-pages -d out"
   },
   "dependencies": {
     "autoprefixer": "10.4.14",
