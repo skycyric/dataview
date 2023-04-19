@@ -4,10 +4,15 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "next build --outdir=build && next export --outdir=build",
     "start": "next start",
     "lint": "next lint",
-    "export": "next export"
+    "export": "next export",
+    "clean": "rm -rf build",
+    "prebuild": "npm run clean"
+  },
+  "build": {
+    "distDir": "build"
   },
   "dependencies": {
     "autoprefixer": "10.4.14",
