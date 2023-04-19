@@ -1,12 +1,3 @@
-// import React from 'react';
-// import CountUp from 'react-countup';
-
-// const SearchVolume = ({ volume }) => {
-//     return <CountUp start={0} end={volume} duration={2.5} separator="," />;
-// };
-
-// export default SearchVolume;
-
 import React from 'react';
 import CountUp from 'react-countup';
 import { Typography } from '@mui/material';
