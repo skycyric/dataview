@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "set NODE_OUTDIR=dev&& next dev",
+    "dev": "next dev",
     "build": "next build --outdir=build && next export --outdir=build",
     "start": "next start",
     "lint": "next lint",
