@@ -32,25 +32,6 @@ export default function Home() {
     setEndDate(null);
   }, []);
 
-  // const handleGetApiData = async () => {
-  //   if (keyword === "") {
-  //     alert("錯誤！請輸入查詢關鍵字！");
-  //     return;
-  //   }
-  //   if (!startDate || !endDate) {
-  //     alert("錯誤！請輸入開始或結束的月份");
-  //     return;
-  //   }
-  //   const confirmed = window.confirm(`是否搜尋 ${keyword} 在 ${startDate} 至 ${endDate} 的資料？`);
-  //   if (!confirmed) {
-  //     return;
-  //   }
-  //   const apiData = await GetApiData(apiKey, keyword, startDate, endDate);
-  //   if (apiData) {
-  //     setData(apiData.data);
-  //     setVolume(apiData.volume);
-  //   }
-  // };
   const handleGetApiData = async () => {
     if (keyword === "") {
       setModalContent("錯誤！請輸入查詢關鍵字！");

@@ -4,15 +4,14 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build --outdir=build && next export --outdir=build",
+    "build": "next build",
     "start": "next start",
     "lint": "next lint",
     "export": "next export",
-    "clean": "rmdir /s /q build",
-    "prebuild": "npm run clean"
-  },
-  "build": {
-    "distDir": "build"
+    "clean-build": "rmdir /s /q build",
+    "clean-docs": "rmdir /s /q docs",
+    "prebuild": "npm run clean-build && npm run clean-docs && mkdir build && mkdir docs",
+    "build-and-export": "npm run build && next export && xcopy out docs /E && rmdir /s /q out"
   },
   "dependencies": {
     "@emotion/react": "^11.10.6",

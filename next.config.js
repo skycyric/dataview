@@ -4,6 +4,6 @@ module.exports = {
   env: {
     API_KEY: '81aa3fc0ace24fdcbf5ebcf73f79a8ff',
   },
-  distDir: isDevelopment ? './dev' : './docs',
+  distDir: isDevelopment ? './dev' : './build',
   reactStrictMode: true,
 };
