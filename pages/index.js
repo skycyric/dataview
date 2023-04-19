@@ -2,9 +2,12 @@ import { useState, useEffect } from 'react';
 import moment from 'moment';
 import DataTable from '../components/DataTable';
 import DatePicker from '../components/DatePicker';
+import SearchVolume from '../components/SearchVolume';
+
 
 export default function Home() {
   const [data, setData] = useState([]);
+  const [volume, setVolume] = useState(0);
   const [startDate, setStartDate] = useState(null);
   const [endDate, setEndDate] = useState(null);
   const [minDate, setMinDate] = useState('');
@@ -36,6 +39,7 @@ export default function Home() {
       const response = await fetch(url);
       const apiData = await response.json();
       setData(apiData.traffic_breakdown);
+      setVolume(apiData.search_volume.volume)
     } catch (error) {
       console.error(error);
     }
@@ -55,6 +59,9 @@ export default function Home() {
       <DatePicker id="end-date" min={minDate} max={maxDate} value={endDate} onChange={(e) => setEndDate(e.target.value)} />
       <br /><br />
       <button onClick={getApiData}>查詢</button>
+      <br /><br />
+      <label>Search Volume：</label>
+      <SearchVolume volume={volume} />
       <br /><br />
       <DataTable data={data} />
     </div>
