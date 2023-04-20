@@ -3,5 +3,9 @@
     "paths": {
       "@/*": ["./*"]
     }
+  },
+  "files.exclude": {
+    "**/test": true,
+    "**/*.md": true
   }
 }
